@@ -119,9 +119,9 @@
 
          </section>
 
-          <!--------------- about section ends here --------------->
+          <!--------------- Final da seção --------------->
 
-          <!--------------- services section starts here --------------->
+          <!--------------- Seção dos serviços prestados começa aqui --------------->
 
           <a name="services"></a>
 
@@ -226,9 +226,9 @@
 
          </section>
 
-          <!--------------- services section ends here --------------->
+          <!--------------- E termina aqui --------------->
 
-          <!--------------- team section starts here --------------->
+          <!--------------- Seção sobre o Fundador começa aqui --------------->
 
           <a name="team"></a>
 
@@ -262,9 +262,9 @@
 
           </section>
           
-          <!--------------- team section ends here --------------->
+          <!--------------- E termina aqui --------------->
 
-          <!--------------- newsletter section starts here --------------->
+          <!--------------- NewsLetter --------------->
 
          <section class="newsletter">
 
@@ -291,9 +291,9 @@
 
          </section>
 
-          <!--------------- newsletter section ends here --------------->
+          <!--------------- Acabou --------------->
 
-          <!--------------- contact section starts here --------------->
+          <!--------------- Contato --------------->
 
           <a name="contact"></a>
 
@@ -356,7 +356,7 @@
 
           </section>
 
-          <!--------------- footer starts here --------------->
+          <!--------------- Roda Pé --------------->
 
           <div class="footer">
 
@@ -402,7 +402,7 @@
 
           </div>
 
-          <!--------------- footer ends here --------------->
+          <!--------------- Finalmente >.< --------------->
 
           </div>
 
@@ -412,7 +412,7 @@
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script>
 
-// navigation starts here
+// Navegação
 $("#toggle").click(function() {
           $(this).toggleClass('on');
           $("#resize").toggleClass("active");
@@ -435,9 +435,9 @@ $(document).scroll(function () {
 
 new WOW().init();
 
-// Select all links with hashes
+// Links
 $('a[href*="#"]')
-// Remove links that don't actually link to anything
+// Remove links que não linkan a nada (?)
 .not('[href="#"]')
 .not('[href="#0"]')
 .click(function(event) {
@@ -447,25 +447,25 @@ $('a[href*="#"]')
     && 
     location.hostname == this.hostname
   ) {
-    // Figure out element to scroll to
+    // Descobre pra qual elementro scrollar
     var target = $(this.hash);
     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    // Does a scroll target exist?
+    // existe um elemento pra scrollar?
     if (target.length) {
-      // Only prevent default if animation is actually gonna happen
+      // Só previne Default se a animação realmente for acontecer
       event.preventDefault();
       $('html, body').animate({
         scrollTop: target.offset().top
       }, 1000, function() {
-        // Callback after animation
-        // Must change focus!
+        // chama de novo após animação
+        // Mudar de foco!!
         var $target = $(target);
         $target.focus();
-        if ($target.is(":focus")) { // Checking if the target was focused
+        if ($target.is(":focus")) { // Checando se mudou de foco
           return false;
         } else {
-          $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-          $target.focus(); // Set focus again
+          $target.attr('tabindex','-1'); // Adiciona tabindex para elementos sem foco
+          $target.focus(); // Escolhe foco de novo
         };
       });
     }
